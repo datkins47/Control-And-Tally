@@ -1,4 +1,4 @@
-# **[Work in progress]** NMOS Control Event Grain
+# **[Work in progress]** NMOS Realtime(Control) TBD Event Grain
 
 This repository contains details of this AMWA Specification for control event Grains using Networked Media Open Specifications.
 
