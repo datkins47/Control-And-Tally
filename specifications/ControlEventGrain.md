@@ -9,11 +9,7 @@ The elements of this model are abstract, and other NMOS Specifications define ho
 
 This specification also adheres to the [proposed NMOS content model](https://github.com/AMWA-TV/nmos-content-model).
 
-
-SOME STUFF HERE
-
-
-##Required
+## Required
 
 - **source_id**: Unique identifier of the Source that produced the Grain.
 - **flow_id**: Unique identifier of the Flow that contains the Grain.
@@ -21,7 +17,7 @@ SOME STUFF HERE
 - **sync_timestamp**: a TimeStamp representing the capture or playback time of the Grain Payload. For Grain Payloads with multiple samples, this shall be the sample time of the first sample.
 - **grain_type**: defines the grain type - set to "event".
 
-##Optional
+## Optional
 
 - **control_id**: Unique identifier of the Control that produced the Grain.
 - **sync_id**: Unique identifier.
@@ -45,8 +41,8 @@ SOME STUFF HERE
 
 - **status_map**: An array of statuses, each consisting of a name (string) and a description (string)
 
-##Extended
+## Extended
 
-If required, additional data can be added to the Extended packet 
+If required, additional data can be added to the Extended packet.
 
 
