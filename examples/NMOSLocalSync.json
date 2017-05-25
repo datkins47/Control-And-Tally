@@ -1,0 +1,11 @@
+{
+	"control_id": null, 
+	"flow_id": "185e2b9b-371e-4091-8917-891752d36960", 
+	"source_id": "722a2b2e-4e02-4adc-84dc-95bf672947f2", 
+	"origin_timestamp": "1495628335:272717000", 
+	"creation_timestamp": "1495628335:272717000", 
+	"sync_timestamp": "1495628335:272717000", 
+	"time_offset": "2000", 
+	"type": "NmosLocalSync", 
+	"sync_id": "3927e317-f536-43ea-8d09-88e7065072ba"    
+}
