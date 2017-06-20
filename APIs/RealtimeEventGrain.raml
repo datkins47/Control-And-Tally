@@ -1,0 +1,22 @@
+#%RAML 1.0
+title: NMOS Realtime Event and Tally API
+version: v0.1
+baseUri: http://myapi.mysite.com/api/{version}
+mediaType: application/json
+schemas:
+  - RealtimeEventGrain: !include schemas/RealtimeEventGrain.json
+	EmptySchema: !include schemas/Emptyjson
+	ErrorSchema: !include schemas/Error.json
+
+/:
+  displayName: Interface for controlling part of a Flow
+  post:
+	body:
+		application/json:
+			example: !include ../examples/CrosspointSwitch.json
+			schema: RealtimeEventGrain
+    responses:
+		200:
+			schema: EmptySchema
+		400:
+			schema: ErrorSchema
