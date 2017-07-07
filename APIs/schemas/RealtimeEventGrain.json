@@ -1,15 +1,15 @@
 {
-	"type": "NMOS_Realtime_Event_Grain",
+	"title": "NMOS_Realtime_Event_Grain",
 	"properties": {
 		"source_id": {
 			"type": "string",
 			"description": "Unique identifier of the Source that produced the Grain",
-			"pattern": "^[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}$"
+			"pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
 		},
 		"flow_id": {
 			"type": "string",
 			"description": "Unique identifier of the Flow that contains the Grain",
-			"pattern": "^[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}$"
+			"pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
 		},
 		"origin_timestamp": {
 			"type": "string",
@@ -47,17 +47,17 @@
 		"control_id": {
 			"type": "string",
 			"description": "Unique identifier of the Control that produced the Grain.",
-			"pattern": "^[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}$"
+			"pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
 		},
 		"sync_id": {
 			"type": "string",
 			"description": "Unique identifier.",
-			"pattern": "^[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}$"
+			"pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
 		},
 		"device_id": {
 			"type": "string",
 			"description": "Unique identifier of the Device that produced the Grain.",
-			"pattern": "^[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}-[0-9a-f]{2}$"
+			"pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
 		},
 		"description": {
 			"type": "string"
