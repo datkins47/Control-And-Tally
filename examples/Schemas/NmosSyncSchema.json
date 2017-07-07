@@ -23,14 +23,16 @@
 		},
 		"type": {
 			"type": "string",
+			"default": "NMOSSync",
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
 			"type": "string",
+			"default": "Event",
 			"description": "Defines the grain type"
 		},
 		"grain_duration": {
-			"type": "number",
+			"type": "number",			
 			"description": "Duration of the grain",
 			"minimum": 0
 		},
@@ -126,11 +128,12 @@
 		}
 	},
 	"required": [
-		"source_id",
+		"type",
 		"flow_id",
+		"grain_type",
 		"origin_timestamp",
-		"sync_timestamp",
-		"type"
-	],
-	"type": "object"
+		"source_id",
+		"sync_id",
+		"sync_timestamp"
+	]
 }

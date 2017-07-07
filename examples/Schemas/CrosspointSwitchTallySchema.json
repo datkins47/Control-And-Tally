@@ -23,10 +23,12 @@
 		},
 		"type": {
 			"type": "string",
+			"default": "CrosspointSwitchTally",
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
 			"type": "string",
+			"default": "Event",
 			"description": "Defines the grain type"
 		},
 		"grain_duration": {
@@ -122,15 +124,31 @@
 		},
 		"extended": {
 			"description": "Freeform object containing additional properties. Can be empty.",
+			"additionalProperties": true,
+			"properties": {
+				"crosspoint_slot_id": {
+					"description": "Identifying name of the slot in the crosspoint stream to put the source into",
+					"type": "string"
+				},
+				"source_stream_id": {
+					"description": "Identifying name of the source stream",
+					"type": "string"
+				}
+			},
+			"required": [
+				"source_stream_id",
+				"crosspoint_slot_id"
+			],
 			"type": "object"
 		}
 	},
 	"required": [
-		"source_id",
+		"type",
 		"flow_id",
+		"grain_type",
 		"origin_timestamp",
-		"sync_timestamp",
-		"type"
+		"source_id",
+		"extended"
 	],
 	"type": "object"
 }

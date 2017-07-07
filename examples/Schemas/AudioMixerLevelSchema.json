@@ -23,10 +23,12 @@
 		},
 		"type": {
 			"type": "string",
+			"default": "AudioMixerLevel",
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
 			"type": "string",
+			"default": "Event",
 			"description": "Defines the grain type"
 		},
 		"grain_duration": {
@@ -121,16 +123,44 @@
 			}
 		},
 		"extended": {
-			"description": "Freeform object containing additional properties. Can be empty.",
+			"additionalProperties": true,
+			"properties": {
+				"audio_mixer_id": {
+					"description": "Identifier for the audio mixer to be used",
+					"type": "string"
+				},
+				"source_slot_alias": {
+					"description": "Human alias for the source_slot_id",
+					"type": "string"
+				},
+				"source_slot_id": {
+					"description": "Identifier for the source to be mixed into the target",
+					"type": "string"
+				},
+				"target_slot_alias": {
+					"description": "Human alias for the target_slot_id",
+					"type": "string"
+				},
+				"target_slot_id": {
+					"description": "Identifier for the output of the mix",
+					"type": "string"
+				}
+			},
+			"required": [
+				"source_slot_id",
+				"target_slot_id",
+				"audio_mixer_id"
+			],
 			"type": "object"
 		}
 	},
 	"required": [
-		"source_id",
+		"type",
 		"flow_id",
+		"grain_type",
 		"origin_timestamp",
-		"sync_timestamp",
-		"type"
+		"source_id",
+		"extended"
 	],
 	"type": "object"
 }

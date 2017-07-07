@@ -23,10 +23,12 @@
 		},
 		"type": {
 			"type": "string",
+			"default": "AudioMixerLevelTallySchema",
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
 			"type": "string",
+			"default": "Event",
 			"description": "Defines the grain type"
 		},
 		"grain_duration": {

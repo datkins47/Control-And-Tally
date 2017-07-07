@@ -1,18 +1,14 @@
- {
-	"control_id": null, 
-	"flow_id": "185e2b9b-371e-4091-8917-891752d36960", 
-	"source_id": "e40f9636-7e29-401b-a953-c0c3d7717075", 
-	"origin_timestamp": "1495628348:058760000", 
-	"creation_timestamp": "1495628348:058760000", 
-	"sync_timestamp": "1495628348:058760000", 
-	"time_offset": "2000", 
+{
+	"flow_id": "0e59a09e-4d74-4c2c-bafd-36b5d25f6920", 
+	"source_id": "571a1dff-d819-44db-0101-cf71a0564996", 
+	"origin_timestamp": "1498830166:554310000", 
+	"creation_timestamp": "1498830166:554310000", 
+	"sync_timestamp": "1498830166:548318000", 
+	"time_offset": 1200, 
 	"type": "CrosspointSwitch", 
-	"description": "", 
-	"extended" :         {
-		"type": "CrosspointSwitch", 
-		"Switch" :             {
-			"Destination": "Studio1", 
-			"Source": "Studio1"            
-		}        
+	"grain_type": "Event",
+	"extended":         {
+		"crosspoint_slot_id": "PgmMixChB", 
+		"source_stream_id": "Src02"            
 	}    
 }

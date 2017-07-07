@@ -23,10 +23,12 @@
 		},
 		"type": {
 			"type": "string",
+			"default": "UIControlMessage",
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
 			"type": "string",
+			"default": "Event",
 			"description": "Defines the grain type"
 		},
 		"grain_duration": {
@@ -130,7 +132,9 @@
 		"flow_id",
 		"origin_timestamp",
 		"sync_timestamp",
+		"control_id",
+		"grain_type",
+		"state",
 		"type"
-	],
-	"type": "object"
+	]
 }
