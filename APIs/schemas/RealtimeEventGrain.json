@@ -130,7 +130,8 @@
 		"flow_id",
 		"origin_timestamp",
 		"sync_timestamp",
-		"type"
+		"type",
+		"grain_type"
 	],
 	"type": "object"
 }
