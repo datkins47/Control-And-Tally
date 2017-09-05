@@ -1,4 +1,4 @@
-# **[Work in progress]** NMOS Realtime Event and Tally Grain
+# **[Work in progress]** Proposed NMOS Realtime Event and Tally Grain
 
 This repository contains details of this AMWA Specification for event Grains using Networked Media Open Specifications.
 
