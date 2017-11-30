@@ -23,7 +23,7 @@
 		},
 		"type": {
 			"type": "string",
-			"default": "STV_Event",
+			"enum": ["STV_SeekAction"],
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
@@ -76,7 +76,7 @@
 		},
 		"label": {
 			"type": "string",
-			"description": "Free form text, usually for the control alias."
+			"description": "Alias of the stream."
 		},
 		"nmemonic": {
 			"type": "string",
@@ -104,7 +104,7 @@
 		},
 		"position": {
 			"type": "integer",
-			"description": "Used to indicate the position of, for example, a slide bar."
+			"description": "Frame number to seek to"
 		},
 		"minimum": {
 			"type": "integer",
@@ -151,6 +151,8 @@
 		"origin_timestamp",
 		"sync_timestamp",
 		"type",
-		"grain_type"
+		"grain_type",
+		"position",
+		"target_id"
 	]
 }

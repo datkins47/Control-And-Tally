@@ -23,7 +23,7 @@
 		},
 		"type": {
 			"type": "string",
-			"default": "STV_Event",
+			"enum": ["STV_DomainVariableUpdated"],
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
@@ -68,7 +68,7 @@
 		},
 		"target_alias": {
 			"type": "string",
-			"description": "Alias of the intended target for the Grain."
+			"description": "Domain alias."
 		},
 		"description": {
 			"type": "string",
@@ -76,7 +76,7 @@
 		},
 		"label": {
 			"type": "string",
-			"description": "Free form text, usually for the control alias."
+			"description": "Name of the domain variable."
 		},
 		"nmemonic": {
 			"type": "string",
@@ -84,7 +84,7 @@
 		},
 		"value": {
 			"type": "string",
-			"description": "Free form text, usually for setting text in a control."
+			"description": "Value of the domain variable."
 		},
 		"creation_timestamp": {
 			"type": "string",
@@ -146,11 +146,15 @@
 		}
 	},
 	"required": [
+		"control_id",
 		"source_id",
 		"flow_id",
 		"origin_timestamp",
 		"sync_timestamp",
 		"type",
-		"grain_type"
+		"grain_type",
+		"label",
+		"value",
+		"target_alias"
 	]
 }

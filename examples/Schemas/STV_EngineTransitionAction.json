@@ -23,7 +23,7 @@
 		},
 		"type": {
 			"type": "string",
-			"default": "STV_Event",
+			"enum": ["STV_EngineTransitionAction"],
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
@@ -76,7 +76,7 @@
 		},
 		"label": {
 			"type": "string",
-			"description": "Free form text, usually for the control alias."
+			"description": "Alias of the stream."
 		},
 		"nmemonic": {
 			"type": "string",
@@ -141,7 +141,62 @@
 			}
 		},
 		"extended": {
-			"description": "Freeform object containing additional properties. Can be empty.",
+			"properties": {
+				"mix": {
+					"items": {
+						"properties": {
+							"crosspoint_slot_alias": {
+								"description": "Human readable alias for the crosspoint slot.",
+								"type": "string"
+							},
+							"crosspoint_slot_id": {
+								"description": "Identifier for the crosspoint slot.",
+								"type": "string"
+							},
+							"start_alpha": {
+								"description": "Start alpha level of this source.",
+								"maximum": 254,
+								"minimum": 0,
+								"type": "integer"
+							},
+							"current_alpha": {
+								"description": "Current alpha level of this source.",
+								"maximum": 254,
+								"minimum": 0,
+								"type": "integer"
+							},
+							"end_alpha": {
+								"description": "End alpha level of this source.",
+								"maximum": 254,
+								"minimum": 0,
+								"type": "integer"
+							}
+						},
+						"required": [
+							"crosspoint_slot_id",
+							"current_alpha"
+						],
+						"type": "object"
+					},
+					"minItems": 1,
+					"type": "array"
+				},
+				"transition_duration": {
+					"type": "number",
+					"description": "Duration of the mix.",
+					"minimum": 0
+				},
+				"transition_type": {
+					"description": "String used to define the type of transmission.",
+					"enum": ["Auto", "Cut"],
+					"type": "string"
+				}
+			},
+			"required": [
+				"mix",
+				"transition_duration",
+				"transition_type"
+			],
 			"type": "object"
 		}
 	},
@@ -151,6 +206,8 @@
 		"origin_timestamp",
 		"sync_timestamp",
 		"type",
-		"grain_type"
+		"grain_type",
+		"extended",
+		"target_id"
 	]
 }

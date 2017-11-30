@@ -23,7 +23,7 @@
 		},
 		"type": {
 			"type": "string",
-			"default": "STV_Event",
+			"enum": ["STV_CrosspointSwitchRequest"],
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
@@ -141,16 +141,33 @@
 			}
 		},
 		"extended": {
-			"description": "Freeform object containing additional properties. Can be empty.",
+			"additionalProperties": true,
+			"properties": {
+				"crosspoint_slot_id": {
+					"description": "Identifying name of the slot in the crosspoint stream to put the source into",
+					"type": "string"
+				},
+				"source_stream_id": {
+					"description": "Identifying name of the source stream",
+					"type": "string"
+				}
+			},
+			"required": [
+				"source_stream_id",
+				"crosspoint_slot_id"
+			],
 			"type": "object"
 		}
 	},
 	"required": [
+		"control_id",
 		"source_id",
 		"flow_id",
 		"origin_timestamp",
 		"sync_timestamp",
 		"type",
-		"grain_type"
+		"grain_type",
+		"extended",
+		"target_id"
 	]
 }

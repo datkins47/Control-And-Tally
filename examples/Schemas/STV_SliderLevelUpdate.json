@@ -23,7 +23,7 @@
 		},
 		"type": {
 			"type": "string",
-			"default": "STV_Event",
+			"enum": ["STV_SliderLevelUpdate"],
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
@@ -141,16 +141,37 @@
 			}
 		},
 		"extended": {
-			"description": "Freeform object containing additional properties. Can be empty.",
+			"properties": {
+				"target_position": {
+					"description": "Number indication the target position of the slider bar.",
+					"type": "number"
+				},				
+				"current_position": {
+					"description": "Number indication the current position of the slider bar.",
+					"type": "number"
+				},
+				"duration": {
+					"type": "number",
+					"description": "Duration to go from current to target position.",
+					"minimum": 0
+				}
+			},
+			"required": [
+				"duration",
+				"current_position",
+				"target_position"
+			],
 			"type": "object"
 		}
 	},
 	"required": [
+		"control_id",
 		"source_id",
 		"flow_id",
 		"origin_timestamp",
 		"sync_timestamp",
 		"type",
-		"grain_type"
+		"grain_type",
+		"extended"
 	]
 }

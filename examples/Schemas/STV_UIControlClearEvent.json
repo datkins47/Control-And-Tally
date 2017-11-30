@@ -23,7 +23,7 @@
 		},
 		"type": {
 			"type": "string",
-			"default": "STV_Event",
+			"enum": ["STV_UIControlClearEvent"],
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
@@ -146,6 +146,7 @@
 		}
 	},
 	"required": [
+		"control_id",
 		"source_id",
 		"flow_id",
 		"origin_timestamp",

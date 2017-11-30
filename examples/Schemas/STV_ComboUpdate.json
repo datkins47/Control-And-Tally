@@ -23,7 +23,7 @@
 		},
 		"type": {
 			"type": "string",
-			"default": "STV_Event",
+			"enum": ["STV_ComboUpdate"],
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
@@ -146,11 +146,13 @@
 		}
 	},
 	"required": [
+		"control_id",
 		"source_id",
 		"flow_id",
 		"origin_timestamp",
 		"sync_timestamp",
 		"type",
-		"grain_type"
+		"grain_type",
+		"state"
 	]
 }

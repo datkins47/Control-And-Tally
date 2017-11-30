@@ -23,7 +23,7 @@
 		},
 		"type": {
 			"type": "string",
-			"default": "STV_Event",
+			"enum": ["STV_PauseAction"],
 			"description": "Typical usage is to denote the event type"
 		},
 		"grain_type": {
@@ -76,7 +76,7 @@
 		},
 		"label": {
 			"type": "string",
-			"description": "Free form text, usually for the control alias."
+			"description": "Alias of the stream."
 		},
 		"nmemonic": {
 			"type": "string",
@@ -151,6 +151,7 @@
 		"origin_timestamp",
 		"sync_timestamp",
 		"type",
-		"grain_type"
+		"grain_type",
+		"target_id"
 	]
 }
